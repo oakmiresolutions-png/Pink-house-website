@@ -448,7 +448,7 @@ textarea:focus {
 }
 
 .feature-grid,
-.commercial-shell,
+.launch-shell,
 .emergency-grid,
 .why-grid,
 .final-card {
@@ -459,18 +459,18 @@ textarea:focus {
 }
 
 .feature-grid p:last-child,
-.commercial-copy p,
+.launch-copy p,
 .emergency-grid p,
 .why-grid p {
   color: rgba(255,255,255,0.76);
 }
 
-.commercial-copy p,
+.launch-copy p,
 .why-grid p {
   color: var(--muted);
 }
 
-.commercial-shell {
+.launch-shell {
   align-items: stretch;
 }
 
@@ -499,14 +499,14 @@ textarea:focus {
   background: var(--teal);
 }
 
-.commercial-panel {
+.launch-panel {
   padding: 28px;
   border-radius: var(--radius);
   background: var(--soft);
   border: 1px solid var(--line);
 }
 
-.commercial-panel p {
+.launch-panel p {
   color: var(--muted);
 }
 
@@ -677,7 +677,7 @@ summary {
 
   .hero-grid,
   .feature-grid,
-  .commercial-shell,
+  .launch-shell,
   .emergency-grid,
   .why-grid {
     grid-template-columns: 1fr;
@@ -819,4 +819,3 @@ summary {
     background: var(--pink-deep);
   }
 }
-
