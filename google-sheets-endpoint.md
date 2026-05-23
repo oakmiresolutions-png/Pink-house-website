@@ -2,6 +2,10 @@
 
 Status: endpoint deployed and connected to the website form.
 
+Email alerts:
+- oakmiresolutions@gmail.com
+- oakmireproperties@gmail.com
+
 Sheet:
 https://docs.google.com/spreadsheets/d/1vK0_1FUTH-lsY9p6TTE166o1YRrn_iK2K3rUX0TJkPU/edit
 
@@ -89,3 +93,5 @@ function json_(payload) {
 ```
 
 The website posts to this endpoint using a hidden iframe so visitors stay on the page after submitting.
+
+Each successful submission appends a row to the Sheet and sends a new-lead email alert with the customer name, phone, location, property type, urgency, service needed, description, and Sheet link.
