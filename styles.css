@@ -448,7 +448,6 @@ textarea:focus {
 }
 
 .feature-grid,
-.launch-shell,
 .emergency-grid,
 .why-grid,
 .final-card {
@@ -459,77 +458,12 @@ textarea:focus {
 }
 
 .feature-grid p:last-child,
-.launch-copy p,
-.emergency-grid p,
-.why-grid p {
+.emergency-grid p {
   color: rgba(255,255,255,0.76);
 }
 
-.launch-copy p,
 .why-grid p {
   color: var(--muted);
-}
-
-.launch-shell {
-  align-items: stretch;
-}
-
-.check-list {
-  display: grid;
-  gap: 10px;
-  padding: 0;
-  margin: 22px 0;
-  list-style: none;
-}
-
-.check-list li {
-  position: relative;
-  padding-left: 26px;
-  color: var(--muted);
-}
-
-.check-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.45em;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--teal);
-}
-
-.launch-panel {
-  padding: 28px;
-  border-radius: var(--radius);
-  background: var(--soft);
-  border: 1px solid var(--line);
-}
-
-.launch-panel p {
-  color: var(--muted);
-}
-
-.mini-metric {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 12px;
-  padding: 14px;
-  background: white;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  font-weight: 900;
-}
-
-.mini-metric span {
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  background: var(--pink-deep);
-  color: white;
 }
 
 .areas {
@@ -539,7 +473,7 @@ textarea:focus {
 
 .area-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
 
@@ -677,7 +611,6 @@ summary {
 
   .hero-grid,
   .feature-grid,
-  .launch-shell,
   .emergency-grid,
   .why-grid {
     grid-template-columns: 1fr;
