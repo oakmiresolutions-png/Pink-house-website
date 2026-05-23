@@ -1,6 +1,6 @@
 # Google Sheets Form Endpoint
 
-Status: blocked until the Google Apps Script API is enabled for OAuth project `905799050117`.
+Status: endpoint deployed and connected to the website form.
 
 Sheet:
 https://docs.google.com/spreadsheets/d/1vK0_1FUTH-lsY9p6TTE166o1YRrn_iK2K3rUX0TJkPU/edit
@@ -16,8 +16,8 @@ Required columns already added to `Sheet1!A1:I1`:
 - Description
 - Source
 
-API to enable:
-https://console.developers.google.com/apis/api/script.googleapis.com/overview?project=905799050117
+Active web app endpoint:
+https://script.google.com/macros/s/AKfycbzuxt8WncVqjsNO3O7E6bmkZU7zFO7axQ1-cir5Exu61jlxF8Ac2h98P3GZp8k_c4cC/exec
 
 Apps Script code for the endpoint:
 
@@ -88,4 +88,4 @@ function json_(payload) {
 }
 ```
 
-Once the web app URL exists, update the website form to post to it and test with a fake lead.
+The website posts to this endpoint using a hidden iframe so visitors stay on the page after submitting.

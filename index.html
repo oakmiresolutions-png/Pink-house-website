@@ -53,7 +53,7 @@
           </div>
         </div>
 
-        <form class="lead-panel" id="request" aria-label="Request HVAC service">
+        <form class="lead-panel" id="request" aria-label="Request HVAC service" action="https://script.google.com/macros/s/AKfycbzuxt8WncVqjsNO3O7E6bmkZU7zFO7axQ1-cir5Exu61jlxF8Ac2h98P3GZp8k_c4cC/exec" method="post" target="lead-submit-frame">
           <div class="panel-heading">
             <p class="eyebrow">Request Service</p>
             <h2>Tell us what is going on.</h2>
@@ -115,9 +115,12 @@
             <textarea name="description" rows="4" placeholder="System issue, unit type, symptoms, photos/video available, preferred appointment time..."></textarea>
           </label>
 
-          <button class="btn btn-primary btn-submit" type="button">Submit Request</button>
+          <input type="hidden" name="source" value="Website form">
+          <button class="btn btn-primary btn-submit" type="submit">Submit Request</button>
+          <p class="form-status" aria-live="polite"></p>
           <p class="consent">By submitting, you agree that Pink House Heating &amp; Cooling may call or text about your service request. Reply STOP to opt out.</p>
         </form>
+        <iframe class="lead-submit-frame" name="lead-submit-frame" title="Lead form submission"></iframe>
       </div>
     </section>
 
@@ -303,5 +306,29 @@
     <a href="sms:+13346728288?body=Hi%20Pink%20House%20Heating%20%26%20Cooling%2C%20I%20need%20help%20with%20an%20HVAC%20issue.">Text</a>
     <a href="#request">Request</a>
   </div>
+
+  <script>
+    const leadForm = document.querySelector('#request');
+    const leadStatus = document.querySelector('.form-status');
+
+    if (leadForm && leadStatus) {
+      leadForm.addEventListener('submit', () => {
+        const submitButton = leadForm.querySelector('.btn-submit');
+        leadStatus.textContent = 'Request sent. Pink House will follow up with the next step.';
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Request Sent';
+        }
+
+        window.setTimeout(() => {
+          leadForm.reset();
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Submit Request';
+          }
+        }, 1600);
+      });
+    }
+  </script>
 </body>
 </html>
